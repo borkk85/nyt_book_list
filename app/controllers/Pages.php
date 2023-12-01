@@ -1,5 +1,7 @@
 <?php
 
+use App\Libraries\Controller;
+
 
 class Pages extends Controller
 {
@@ -13,19 +15,14 @@ class Pages extends Controller
   }
 
   public function index() {
-    try {
-
-        $books = $this->bookModel->getBooks();
+    
+          $books = $this->bookModel->getBooks();
 
         print_r($books);
 
-        $this->view('pages/index', ['books' => $books]);
-    } catch (Exception $e) {
-        die("Error: " . $e->getMessage());
-    }
+        // $this->view('pages/index', ['books' => $books]);
+
 }
-
-
 
 
   public function about() {

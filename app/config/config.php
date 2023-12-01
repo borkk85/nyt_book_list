@@ -2,16 +2,12 @@
 
 // DB PARAMS
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'borkkk');
-define('DB_PASS', 'QL1sW9OaUyteZkWJkd');
-define('DB_NAME', 'borkkk');
+// Using getenv() function to fetch data from .env file
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASS', getenv('DB_PASS'));
+define('DB_NAME', getenv('DB_NAME'));
 
-// APP Root
-define('APPROOT', dirname(dirname(__FILE__)));
-
-// URL Root
-define('URLROOT', 'http://localhost/nyt_book_list');
-
-// Site Name
-define('SITENAME', 'NYT Book List');
+// URL Root and Site Name
+define('URLROOT', getenv('URLROOT'));
+define('SITENAME', getenv('SITENAME'));
