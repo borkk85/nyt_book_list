@@ -1,7 +1,8 @@
 <?php
 
-use App\Libraries\Controller;
 
+use App\Libraries\Controller;
+use App\Models\Book;
 
 class Pages extends Controller
 {
@@ -11,16 +12,15 @@ class Pages extends Controller
 
   public function __construct()
   {
-    $this->bookModel = $this->model('Book');
+    $this->bookModel = new Book();
   }
 
   public function index() {
     
-          $books = $this->bookModel->getBooks();
+          $books = $this->bookModel->getAllBooks();
 
-        print_r($books);
 
-        // $this->view('pages/index', ['books' => $books]);
+        $this->view('pages/index', $books);
 
 }
 
