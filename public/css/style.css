@@ -72,23 +72,23 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center menu items */
-    gap: 20px; /* Spacing between menu items */
+    justify-content: center; 
+    gap: 20px; 
 }
 
 .menu_item {
-    padding: 10px; /* Spacing around each menu item */
+    padding: 10px; 
 }
 
 .menu_item a {
-    font-size: 1rem; /* Adjust font size */
-    color: var(--global-fc); /* Text color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 1rem; 
+    color: var(--global-fc); 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
 }
 
 .menu_item a:hover, .menu_item a:active {
-    color: #0056b3; /* Change color on hover/active */
+    color: #0056b3; 
 }
 
 .menu_item a {
@@ -145,6 +145,43 @@ header {
 
 .hero-overlay p {
     font-size: 1rem; 
+}
+
+.category-nav {
+    overflow-x: hidden; 
+    white-space: nowrap; 
+}
+
+.category-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    align-items: center;
+}
+
+.category-nav li {
+    margin-right: 10px; 
+    position: relative; 
+}
+
+.category-nav li:not(:last-child)::after {
+    content: "|"; 
+    position: absolute;
+    right: -5px; 
+    color: #ccc; 
+}
+
+.category-nav a {
+    display: block;
+    padding: 10px; 
+    text-decoration: none;
+    color: #333; 
+}
+
+
+.category-nav li:last-child {
+    margin-right: 0;
 }
 
 
