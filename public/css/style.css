@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,100&family=Tinos:wght@400;700&display=swap');
+
+
+:root {
+    --global-ff: Montserat, sans-serif;
+    --global-logo-ff: 'Tinos', serif;
+    --global-fs: 0.8rem;
+    --global-fc: #2f4f4f;
+    --global-title: 2.125rem;
+    --global-bg: #fffcf6;
+
+}
+
+
+body {
+    background: var(--global-bg);
+    font-family: var(--global-ff);
+    font-size: var(--global-fs);
+    line-height: 1.1;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--global-fc);
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+}
+
+.logo > h1 {
+    font-family: var(--global-logo-ff);
+    font-size: var(--global-title);
+    font-weight: 700;
+    color: var(--global-fc);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.menu_left, .menu_right {
+    display: flex;
+    align-items: center;
+    gap: 1.575rem;
+}
+
+.menu_left {
+    justify-content: flex-start;
+    flex-basis: 60%;
+}
+
+.menuHolder {
+   margin: 0 auto;
+}
+
+.menu_right {
+    justify-content: flex-end;
+    flex-basis: 40%;
+}
+
+
+#primary_menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center menu items */
+    gap: 20px; /* Spacing between menu items */
+}
+
+.menu_item {
+    padding: 10px; /* Spacing around each menu item */
+}
+
+.menu_item a {
+    font-size: 1rem; /* Adjust font size */
+    color: var(--global-fc); /* Text color */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menu_item a:hover, .menu_item a:active {
+    color: #0056b3; /* Change color on hover/active */
+}
+
+.menu_item a {
+    font-family: var(--global-logo-ff);
+    font-weight: 600;
+    color: var(--global-fc);
+    font-size: 1.250rem;
+}
+
+.search-bar {
+    width: 50%;
+}
+
+.search-bar input {
+    font-family: var(--global-logo-ff);
+    color: var(--global-fc);
+    font-size: 1.250rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.auth-button{
+    width: 50px;
+    padding: 10px 15px;
+}
+
+
+.hero-section {
+    width: 100%;
+    height: 50vh;
+    background-image: url('../img/hero-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.hero-overlay {
+    text-align: center;
+    color: white; 
+    max-width: 600px; 
+    padding: 20px; 
+}
+
+.hero-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    font-size: 1rem; 
+}
+
+
+.book-listings {
+    padding-block: 4rem;
+    width: min(80%, 60rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+}
+
+.book {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.book img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;    
+    box-shadow: 0px 8px 14px 0px rgba(0,0,0,0.64);
+    -webkit-box-shadow: 0px 8px 14px 0px rgba(0,0,0,0.64);
+    -moz-box-shadow: 0px 8px 14px 0px rgba(0,0,0,0.64);
+}
